@@ -4,18 +4,24 @@
   Define terms and link to docs.github.com.
 -->
 
-## Step 2: Add a Dockerfile
+## Step 2: 添加 Dockerfile
 
-_You created a publishing workflow! :tada:_
+_你已经成功创建了用于发布的 workflow! :tada:_
 
-We will add a `Dockerfile` to the `cd` branch. The `Dockerfile` contains a set of instructions that get stored in a `Docker Image`. If you'd like, you can [learn more about Dockerfiles](https://docs.docker.com/engine/reference/builder/).
+接下来，我们将在 `cd` 分支下添加 `Dockerfile` 文件，用于构建最终的 Docker 镜像。如果你第一次接触 Dockerfile 可以[深入了解 Dockerfile 的语法和用法](https://docs.docker.com/engine/reference/builder/)。
 
-### :keyboard: Activity: Add a Dockerfile
+### :keyboard: 实操环节：添加 Dockerfile
 
-1. In the `cd` branch, create `Dockerfile` at the project root and include:
+1. 在 `cd` 分支的根目录下创建名为 `Dockerfile` 的文件，并写入以下内容：
+
    ```dockerfile
    FROM nginx:1.24-alpine
    COPY . /usr/share/nginx/html
    ```
-1. Commit your changes.
-1. Wait about 20 seconds then refresh this page (the one you're following instructions from). [GitHub Actions](https://docs.github.com/en/actions) will automatically update to the next step.
+
+   我来解释下：
+   - 使用 `nginx:1.24-alpine` 作为基础镜像。
+   - 将当前项目目录下的所有文件复制到 Nginx 的默认网页目录中。
+
+2. 提交你的更改。
+3. 等待约 20 秒，然后刷新本页面。[GitHub Actions](https://docs.github.com/en/actions) 会自动检测到新文件，并推进到下一步。

@@ -4,14 +4,16 @@
   Define terms and link to docs.github.com.
 -->
 
-## Step 3: Merge your changes
+## Step 3: 合并你的更改
 
-_Let's get publishing! :heart:_
+_现在，让我们正式发布吧! :heart:_
 
-You can now [merge](https://docs.github.com/en/get-started/quickstart/github-glossary#merge) your changes!
+你已经完成了所有准备工作，现在可以将 `cd` 分支中的更改合并到 `main` 分支了。一旦合并，GitHub Actions 会自动触发工作流，构建并把 Docker 镜像发布到 GitHub Packages。
 
-### :keyboard: Activity: Merge your changes
+### :keyboard: 实操环节: 合并你的更改
 
-1. Merge your changes from `cd` into `main`. If you created the pull request in step 1, just open that PR and click on **Merge pull request**. If you did not create the pull request earlier, you can do it now by following the instructions in step 1.
-1. (optional) Delete the branch `cd`.
-1. Wait about 20 seconds then refresh this page (the one you're following instructions from). [GitHub Actions](https://docs.github.com/en/actions) will automatically update to the next step.
+1. 将 `cd` 分支的更改合并到 `main` 分支：
+    - 如果你在第 1 步中已经创建了拉取请求（PR），只需打开该 PR，点击 **Merge pull request**（合并拉取请求）按钮即可。
+    - 如果尚未创建 PR，现在可以按第 1 步中的说明新建一个：进入 **Pull Requests** 标签页，点击 **New pull request**，设置 `base: main`、`compare: cd`，然后创建并合并它。
+2. （可选）合并完成后，你可以删除 `cd` 分支以保持仓库整洁。
+3. 等待约 20 秒，然后刷新本页面。[GitHub Actions](https://docs.github.com/en/actions) 会自动检测到 `main` 分支的更新，并进入下一步。
